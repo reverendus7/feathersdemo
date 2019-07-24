@@ -45,6 +45,17 @@ Take a look at
 
 You can use the `PostmanCollection.js` in order to test the service
 
+### Step 3 - Let's use Hooks
+
+```
+feathers generate hook
+```
+
+Take a look at
+
+- `src/services/hospitals/hospitals.hooks.js`
+- `src/hooks/add-timestamp.js`
+
 ## Getting Started
 
 Getting up and running is as easy as 1, 2, 3.
