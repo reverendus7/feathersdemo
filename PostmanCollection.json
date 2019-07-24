@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "97a4119a-8ec8-437b-a63b-ca181732a922",
+		"name": "FeathersJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get a specific hospital (by _id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/hospitals/5d38c98626e32c7be70ec718",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals",
+						"5d38c98626e32c7be70ec718"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new hospital",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ospedale di Topolinia\",\n\t\"owner\": \"Commissario Basettoni\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/hospitals",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a second hospital",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ospedale di Paperopoli\",\n\t\"owner\": \"Zio Paperone\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/hospitals",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all hospitals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/hospitals",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an hospital",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ospedale di Topolinia\",\n    \"owner\": \"Eta Beta\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/hospitals/5d38c98626e32c7be70ec718",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals",
+						"5d38c98626e32c7be70ec718"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch an hospital",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\": \"Gambadilegno\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/hospitals/5d38c98626e32c7be70ec718",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals",
+						"5d38c98626e32c7be70ec718"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an hospital",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/hospitals/5d38c98626e32c7be70ec718",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals",
+						"5d38c98626e32c7be70ec718"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for an hospital",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/hospitals?owner=Zio Paperone",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"hospitals"
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "Zio Paperone"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "43ba6f65-a1f9-44ab-bfdf-341d74fd067b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "250136db-5636-4bc1-b072-7e67c7d7242b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d6a74914-86ba-47d9-902a-0af74cb8cdf2",
+			"key": "host",
+			"value": "http://localhost:3030",
+			"type": "string"
+		}
+	]
+}

@@ -31,6 +31,20 @@ Take a look at
 - `src/app.js`
 - `src/app.hooks.js`
 
+### Step 2 - Generate a service
+
+```
+feathers generate service
+```
+
+Take a look at
+
+- `package.json`: Some dependencies has been added
+- `config/default.json`, `src/mongodb.js` and `src/app.js`: DB references appear
+- `src/services/index.js` and `src/services/hospitals`: The service has been added
+
+You can use the `PostmanCollection.js` in order to test the service
+
 ## Getting Started
 
 Getting up and running is as easy as 1, 2, 3.
