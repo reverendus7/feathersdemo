@@ -45,7 +45,7 @@ Take a look at
 
 You can use the `PostmanCollection.js` in order to test the service
 
-### Step 3 - Let's use Hooks
+### Step 3 - Let's use Hooks
 
 ```
 feathers generate hook
